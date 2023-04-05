@@ -10,7 +10,7 @@ This exercise is designed to test your ability to create a RESTful API for manag
 - Transfer money between accounts
 
 ## Design Process
-To implement the daily interest feature, you will need to create a function that runs on a daily basis to calculate the interest earned by each account holder. You will also need to create a database table or data model that tracks the account balance, interest rate, and date of last interest calculation. The function should calculate the interest earned since the last calculation date and update the account balance accordingly.
+To implement the daily interest feature, you will need to create a function that runs on a daily basis to calculate the interest earned by each account holder. You will also need to create a database table or data model that tracks the current account balance, interest rate, and date of last interest calculation. The function should calculate the interest earned since the last calculation date and update the account balance accordingly.
 
 ## Instructions
 1. Clone this repository to your local machine.
