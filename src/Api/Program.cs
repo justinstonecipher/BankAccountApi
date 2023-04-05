@@ -1,4 +1,5 @@
 using Application.Services;
+using Domain.Interfaces;
 using Infrastructure;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,8 +12,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<BankDbContext>(options => options.UseInMemoryDatabase(databaseName: "BankAccountDB"));
-builder.Services.AddScoped<BankAccountService>();
+builder.Services.AddDbContext<BankDbContext>(options => options.UseInMemoryDatabase(databaseName: "BankDB"));
+builder.Services.AddScoped<IBankAccountService, BankAccountService>();
 
 var app = builder.Build();
 
