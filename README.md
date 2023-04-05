@@ -19,6 +19,8 @@ To implement the daily interest feature, you will need to create a function that
 4. Implement the daily interest calculation process.
 5. Write tests for your implementation
 
+Note: You can modify the models/project architecture as you solve the problem to help write clean code. This solution is just a starting point.
+
 ## Evaluation Criteria
 - Your implementation should meet all of the acceptance criteria listed above.
 - Your code should be well-organized and easy to read.

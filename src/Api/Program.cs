@@ -1,3 +1,4 @@
+using Application.Services;
 using Infrastructure;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,8 +12,10 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<BankAccountApiDbContext>(options => options.UseInMemoryDatabase(databaseName: "BankAccountDB"));
+builder.Services.AddScoped<BankAccountService>();
 
 var app = builder.Build();
+
 // Seed the database with initial data
 using (var scope = app.Services.CreateScope())
 {
