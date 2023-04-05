@@ -1,9 +1,8 @@
 ﻿using Domain.Models;
 
-namespace Domain.Interfaces
+namespace Domain.Interfaces;
+
+public interface IBankAccountService
 {
-    public interface IBankAccountService
-    {
-        Task<BankAccount> GetBankAccount(string bankAccountNumber);
-    }
+    Task<BankAccount> GetBankAccountAsync(string accountNumber);
 }

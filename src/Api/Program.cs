@@ -11,7 +11,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<BankAccountApiDbContext>(options => options.UseInMemoryDatabase(databaseName: "BankAccountDB"));
+builder.Services.AddDbContext<BankDbContext>(options => options.UseInMemoryDatabase(databaseName: "BankAccountDB"));
 builder.Services.AddScoped<BankAccountService>();
 
 var app = builder.Build();
@@ -20,7 +20,7 @@ var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
-    var context = services.GetRequiredService<BankAccountApiDbContext>();
+    var context = services.GetRequiredService<BankDbContext>();
     SeedData.Seed(context);
 
     var checkingAccount = context.BankAccount.FirstOrDefault(a => a.AccountHolder == "Steve");

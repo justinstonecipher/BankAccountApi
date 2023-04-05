@@ -2,20 +2,19 @@
 using Domain.Models;
 using Infrastructure;
 
-namespace Application.Services
+namespace Application.Services;
+
+public class BankAccountService : IBankAccountService
 {
-    public class BankAccountService : IBankAccountService
+    private readonly BankDbContext _dbContext;
+
+    public BankAccountService(BankDbContext dbContext)
     {
-        private readonly BankAccountApiDbContext _dbContext;
+        _dbContext = dbContext;
+    }
 
-        public BankAccountService(BankAccountApiDbContext dbContext)
-        {
-            _dbContext = dbContext;
-        }
-
-        public Task<BankAccount> GetBankAccount(string bankAccountNumber)
-        {
-            throw new NotImplementedException();
-        }
+    public Task<BankAccount> GetBankAccountAsync(string accountNumber)
+    {
+        throw new NotImplementedException();
     }
 }
