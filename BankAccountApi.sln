@@ -3,27 +3,28 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BA217B23-ED1A-4FD9-ACC8-F04573175776}"
 	ProjectSection(SolutionItems) = preProject
-		instructions.md = instructions.md
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{33E886B3-7B6D-41FD-BE4F-C08942DB6987}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "src\Api\Api.csproj", "{85D26C79-B122-4074-9653-C113AFE0804D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "src\Api\Api.csproj", "{85D26C79-B122-4074-9653-C113AFE0804D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "src\Domain\Domain.csproj", "{9ACAE1A8-5279-4152-88CF-010B7221EF41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "src\Domain\Domain.csproj", "{9ACAE1A8-5279-4152-88CF-010B7221EF41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "src\Infrastructure\Infrastructure.csproj", "{A7053B63-AB9E-439A-B815-F19F305161A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "src\Infrastructure\Infrastructure.csproj", "{A7053B63-AB9E-439A-B815-F19F305161A0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{D1BA0567-D752-40AE-A3A3-698C325FE670}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiUnitTests", "tests\ApiUnitTests\ApiUnitTests.csproj", "{44B5B390-ED3D-4E72-AAF8-F37F98F8C4AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiUnitTests", "tests\ApiUnitTests\ApiUnitTests.csproj", "{44B5B390-ED3D-4E72-AAF8-F37F98F8C4AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainUnitTests", "tests\DomainUnitTests\DomainUnitTests.csproj", "{B630D477-C65C-4E11-A140-0C108A00DAC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DomainUnitTests", "tests\DomainUnitTests\DomainUnitTests.csproj", "{B630D477-C65C-4E11-A140-0C108A00DAC6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfrastructureUnitTests", "tests\InfrastructureUnitTests\InfrastructureUnitTests.csproj", "{82F94962-F217-4ED2-8737-BBB564E66C23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InfrastructureUnitTests", "tests\InfrastructureUnitTests\InfrastructureUnitTests.csproj", "{82F94962-F217-4ED2-8737-BBB564E66C23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "src\Application\Application.csproj", "{E5449A82-DFDE-4793-8704-2A85E38DAC15}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +56,10 @@ Global
 		{82F94962-F217-4ED2-8737-BBB564E66C23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82F94962-F217-4ED2-8737-BBB564E66C23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82F94962-F217-4ED2-8737-BBB564E66C23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5449A82-DFDE-4793-8704-2A85E38DAC15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5449A82-DFDE-4793-8704-2A85E38DAC15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5449A82-DFDE-4793-8704-2A85E38DAC15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5449A82-DFDE-4793-8704-2A85E38DAC15}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,6 +71,7 @@ Global
 		{44B5B390-ED3D-4E72-AAF8-F37F98F8C4AE} = {D1BA0567-D752-40AE-A3A3-698C325FE670}
 		{B630D477-C65C-4E11-A140-0C108A00DAC6} = {D1BA0567-D752-40AE-A3A3-698C325FE670}
 		{82F94962-F217-4ED2-8737-BBB564E66C23} = {D1BA0567-D752-40AE-A3A3-698C325FE670}
+		{E5449A82-DFDE-4793-8704-2A85E38DAC15} = {33E886B3-7B6D-41FD-BE4F-C08942DB6987}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E01350F7-3BDE-45F2-9424-0E827BB9E278}

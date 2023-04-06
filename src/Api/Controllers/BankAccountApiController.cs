@@ -5,24 +5,23 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace BankAccountAPI.Controllers
+namespace BankAccountAPI.Controllers;
+
+[ApiController]
+[Route("[controller]")]
+public class BankAccountController : ControllerBase
 {
-    [ApiController]
-    [Route("[controller]")]
-    public class BankAccountController : ControllerBase
+    private readonly ILogger<BankAccountController> _logger;
+
+    public BankAccountController(ILogger<BankAccountController> logger)
     {
-        private readonly ILogger<BankAccountController> _logger;
+        _logger = logger;
+    }
 
-        public BankAccountController(ILogger<BankAccountController> logger)
-        {
-            _logger = logger;
-        }
-
-        [HttpGet]
-        public IActionResult TestGet()
-        {
-            // TODO: Implement endpoint
-            return Ok();
-        }
+    [HttpGet]
+    public IActionResult TestGet()
+    {
+        // TODO: Implement endpoint
+        return Ok();
     }
 }
